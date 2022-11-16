@@ -1,0 +1,154 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  background-color: #003366;
+  color: white;
+
+  &__header {
+    font-size: 30px;
+  }
+
+  &__edit-btn-clicked {
+    background-color: #8d97ae !important
+  }
+
+  &__edit-btn {
+    background-color: #8d97aea6;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+}
+
+.content-container {
+  display: flex;
+  height: 100vh;
+  background-color: #80808059;
+
+  &__sidebar {
+    width: 25%;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-right: 1px solid black;
+  }
+
+  &__unSelected {
+    cursor: pointer;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__selected {
+    cursor: pointer;
+    background-color: #80808059;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+  }
+
+  &__content {
+    display: flex;
+    padding: 30px;
+    padding-right: 0;
+    gap: 30px;
+    width: 75%;
+    flex-wrap: wrap;
+    max-height: 500px;
+  }
+
+  &__content-card {
+    background-color: white;
+    border-radius: 12px;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      border: 0;
+      background-color: white;
+      color: black;
+      font-size: 20px;
+      background-color: #8080801c;
+      padding: 16px 20px;
+      border-radius: 10px 10px 0px 0px;
+      border-bottom: 1px solid #8080801c;
+    }
+
+    p {
+      padding: 0px 20px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &__inputClicked {
+    border-bottom: 1px solid #0000003b !important;
+  }
+}
+
+.teams {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+    background-color: white;
+  }
+
+  &__item {
+    box-shadow: 0px 0px 14px 0px gray;
+    display: flex;
+    flex-direction: column;
+    width: 19%;
+    max-height: 300px;
+    padding: 14px;
+  }
+
+  &__image {
+    width: 100%;
+    border: 1px solid #80808045;
+  }
+}
+
+.form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 1px solid #0000005e;
+    height: 200px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 6px;
+
+    small {
+      color: #d10f0f;
+      ;
+    }
+  }
+}

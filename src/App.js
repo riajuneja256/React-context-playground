@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header";
+import Container from "./components/container";
+import "./css/style.scss";
+import HeaderContext from "./context/headerContext";
+import { useState } from "react";
 
 function App() {
+  const [edit, setEditValue] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HeaderContext.Provider value={{ edit, setEditValue }}>
+      <Header />
+      <Container />
+    </HeaderContext.Provider>
   );
 }
 
