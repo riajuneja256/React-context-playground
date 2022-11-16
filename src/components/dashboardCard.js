@@ -1,9 +1,10 @@
 import React, { useState, useContext } from "react";
-import HeaderContext from "../context/headerContext";
+import DataContext from "../context/dataContext";
 
 function DashboardCard({ data, handleChangeParent }) {
   const [cardData, updateData] = useState(data);
-  const headerContextValues = useContext(HeaderContext);
+  const contextValues = useContext(DataContext);
+
   const handleChange = (e) => {
     updateData({ ...cardData, header: e.target.value });
     handleChangeParent({ ...cardData, header: e.target.value });
@@ -11,13 +12,11 @@ function DashboardCard({ data, handleChangeParent }) {
   return (
     <div className="content-container__content-card" key={cardData.value}>
       <input
-        className={
-          headerContextValues.edit && "content-container__inputClicked"
-        }
+        className={contextValues.edit && "content-container__inputClicked"}
         type="text"
         value={cardData.header}
         onChange={handleChange}
-        disabled={headerContextValues.edit === true ? false : true}
+        disabled={contextValues.edit === true ? false : true}
       />
       <p>{cardData.value}</p>
     </div>

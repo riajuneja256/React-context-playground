@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import DataContext from "../context/dataContext";
 import Dashboard from "./dashboard";
-import Team from "./team";
 import Calendar from "./calendar";
+import Team from "./team";
 
 function Content() {
   const values = useContext(DataContext);

@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import DashboardCard from "./dashboardCard";
+import React, { useContext } from "react";
 import DataContext from "../context/dataContext";
+import DashboardCard from "./dashboardCard";
 
 function Dashboard() {
   const contextValues = useContext(DataContext);
